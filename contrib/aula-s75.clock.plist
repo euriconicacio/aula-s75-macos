@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Sets the keyboard clock at login and every 6 hours.
+  __BIN__ is replaced with the absolute path of aula-s75 when installing (see README).
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>aula-s75.clock</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>__BIN__</string>
+        <string>clock</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StartInterval</key>
+    <integer>21600</integer>
+    <key>StandardOutPath</key>
+    <string>/tmp/aula-s75.clock.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/aula-s75.clock.log</string>
+</dict>
+</plist>

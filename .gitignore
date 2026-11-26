@@ -1,0 +1,4 @@
+/aula-s75
+*.o
+*.dSYM/
+.DS_Store

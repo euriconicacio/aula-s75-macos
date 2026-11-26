@@ -1,0 +1,16 @@
+name: aula-s75
+
+services:
+  open-aula:
+    build: .
+    image: aula-s75-open-aula:local
+    ports:
+      - "127.0.0.1:8765:8080"   # localhost only; WebHID needs a secure context, and localhost is one
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
